@@ -1,3 +1,11 @@
+"""
+    Title: mysql_test.py
+    Author: Sue Sampson
+    Date: 12/30/2024
+    Description: Test program connecting to database
+"""
+
+""" import statements """
 import mysql.connector # to connect
 from mysql.connector import errorcode
 
@@ -19,11 +27,10 @@ config = {
 try:
     """ try/catch block for handling potential MySQL database errors """
 
-    db = mysql.connector.connect(**config)  # connect to the movies database
+    db = mysql.connector.connect(**config) # connect to the movies database
 
     # output the connection status
-    print("\n  Database user {} connected to MySQL on host {} with database {}".format(config["user"], config["host"],
-                                                                                       config["database"]))
+    print("\n  Database user {} connected to MySQL on host {} with database {}".format(config["user"], config["host"], config["database"]))
 
     input("\n\n  Press any key to continue...")
 

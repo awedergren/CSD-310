@@ -1,3 +1,8 @@
+# Amanda Wedergren
+# April 22, 2025
+# Module 7.2 Assignment
+
+
 import mysql.connector # to connect
 from mysql.connector import errorcode
 
@@ -9,10 +14,10 @@ secrets = dotenv_values(".env")
 
 """ database config object """
 config = {
-    "user": secrets["USER"],
-    "password": secrets["PASSWORD"],
-    "host": secrets["HOST"],
-    "database": secrets["DATABASE"],
+    "user": 'movies_user',
+    "password": 'popcorn',
+    "host": 'localhost',
+    "database": 'movies',
     "raise_on_warnings": True #not in .env file
 }
 
@@ -43,3 +48,11 @@ finally:
     """ close the connection to MySQL """
 
     db.close()
+
+
+
+cursor = db.cursor()
+cursor.execute('SELECT studio_id, studio_name FROM studio')
+studios = cursor.fetcha11()
+for studio in studios:
+    print('Studio ID: ()\n Studio Name: ()')
