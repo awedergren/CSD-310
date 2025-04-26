@@ -1,3 +1,7 @@
+# Amanda Wedergren
+# April 17, 2025
+# Module 6.2 Assignment
+
 import mysql.connector # to connect
 from mysql.connector import errorcode
 
