@@ -18,7 +18,6 @@ def show_films(cursor, title):
     for film in films:
         print('Film Name: {}\nDirector: {}\nGenre Name ID: {}\nStudio Name: {}\n'.format(film[0], film[1], film[2], film[3]))
 
-
 #using our .env file
 secrets = dotenv_values(".env")
 

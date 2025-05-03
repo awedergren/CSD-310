@@ -9,7 +9,7 @@ import dotenv # to use .env file
 from dotenv import dotenv_values
 
 #using our .env file
-secrets = dotenv_values("bacchus.env")
+secrets = dotenv_values(".env")
 
 """ database config object """
 config = {
@@ -23,7 +23,7 @@ config = {
 try:
     """ try/catch block for handling potential MySQL database errors """
 
-    db = mysql.connector.connect(**config)  # connect to the movies database
+    db = mysql.connector.connect(**config)  # connect to the database
 
     # output the connection status
     print("\n  Database user {} connected to MySQL on host {} with database {}".format(config["user"], config["host"],
