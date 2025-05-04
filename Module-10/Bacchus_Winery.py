@@ -1,3 +1,10 @@
+# Team Blue
+# Module 10
+# Amanda Wedergren
+# Miguel Fernandez
+# Jonah Aney
+# Justin Marucci
+
 import mysql.connector
 from mysql.connector import errorcode
 from dotenv import dotenv_values
